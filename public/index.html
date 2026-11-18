@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayHome | Hotel Management System</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-layout">
+        
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-hotel"></i>
+                </div>
+                <div class="brand-text">
+                    <h2>StayHome</h2>
+                    <span class="brand-subtitle">Hotel Management System</span>
+                </div>
+                <button class="mobile-close-btn" id="mobileCloseBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div class="user-info">
+                    <span class="user-name">Duty Manager</span>
+                    <span class="user-role"><i class="fa-solid fa-circle text-success pulse"></i> System Online</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">CORE MODULES</div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#dashboard" class="nav-link active" data-view="dashboard">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#rooms" class="nav-link" data-view="rooms">
+                            <i class="fa-solid fa-bed"></i>
+                            <span>Room Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#customers" class="nav-link" data-view="customers">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Customer Directory</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#reservations" class="nav-link" data-view="reservations">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <span>Reservations</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#checkinout" class="nav-link" data-view="checkinout">
+                            <i class="fa-solid fa-door-open"></i>
+                            <span>Check-In / Out</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#billing" class="nav-link" data-view="billing">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span>Billing & Invoices</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#history" class="nav-link" data-view="history">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Booking History</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-section-title">ADVANCED MODULES</div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#staff" class="nav-link" data-view="placeholder" data-module="staff">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span>Staff Management</span>
+                            <span class="badge-soon">Soon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#housekeeping" class="nav-link" data-view="placeholder" data-module="housekeeping">
+                            <i class="fa-solid fa-broom"></i>
+                            <span>Housekeeping</span>
+                            <span class="badge-soon">Soon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#restaurant" class="nav-link" data-view="placeholder" data-module="restaurant">
+                            <i class="fa-solid fa-utensils"></i>
+                            <span>Restaurant & Bar</span>
+                            <span class="badge-soon">Soon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#inventory" class="nav-link" data-view="placeholder" data-module="inventory">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <span>Inventory</span>
+                            <span class="badge-soon">Soon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#maintenance" class="nav-link" data-view="placeholder" data-module="maintenance">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>Maintenance</span>
+                            <span class="badge-soon">Soon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#offers" class="nav-link" data-view="placeholder" data-module="offers">
+                            <i class="fa-solid fa-tags"></i>
+                            <span>Offers & Discounts</span>
+                            <span class="badge-soon">Soon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#reports" class="nav-link" data-view="placeholder" data-module="reports">
+                            <i class="fa-solid fa-file-chart-column"></i>
+                            <span>Reports</span>
+                            <span class="badge-soon">Soon</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings" class="nav-link" data-view="placeholder" data-module="settings">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Settings</span>
+                            <span class="badge-soon">Soon</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="academic-badge">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>AI & DS Student Project</strong>
+                        <small>Python • FastAPI • SQLAlchemy</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN WRAPPER -->
+        <div class="main-wrapper">
+            
+            <!-- TOP HEADER -->
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="mobile-toggle-btn" id="mobileToggleBtn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="header-title-box">
+                        <h1 id="pageTitle">Dashboard Overview</h1>
+                        <span class="header-subtitle" id="pageSubtitle">Live property status and guest activity</span>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="live-clock">
+                        <i class="fa-regular fa-clock"></i>
+                        <span id="liveClockDisplay">Loading clock...</span>
+                    </div>
+                    <button class="btn btn-primary" id="btnQuickBooking">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>New Reservation</span>
+                    </button>
+                    <a href="/docs" target="_blank" class="btn btn-outline" title="Open FastAPI Interactive API Documentation">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Swagger Docs</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- MAIN CONTENT CONTAINER -->
+            <main class="content-container">
+
+                <!-- 1. DASHBOARD VIEW -->
+                <section class="view-section active" id="view-dashboard">
+                    <!-- KPI Metric Cards Grid -->
+                    <div class="stats-grid">
+                        <div class="stat-card stat-primary">
+                            <div class="stat-icon"><i class="fa-solid fa-door-closed"></i></div>
+                            <div class="stat-details">
+                                <span class="stat-label">Total Rooms</span>
+                                <h3 class="stat-value" id="kpiTotalRooms">-</h3>
+                                <span class="stat-subtext">Inventory in system</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-success">
+                            <div class="stat-icon"><i class="fa-solid fa-bed"></i></div>
+                            <div class="stat-details">
+                                <span class="stat-label">Available Rooms</span>
+                                <h3 class="stat-value text-success" id="kpiAvailableRooms">-</h3>
+                                <span class="stat-subtext">Ready for occupancy</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-danger">
+                            <div class="stat-icon"><i class="fa-solid fa-key"></i></div>
+                            <div class="stat-details">
+                                <span class="stat-label">Occupied Rooms</span>
+                                <h3 class="stat-value text-danger" id="kpiOccupiedRooms">-</h3>
+                                <span class="stat-subtext">Guests currently in-house</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-warning">
+                            <div class="stat-icon"><i class="fa-solid fa-user-group"></i></div>
+                            <div class="stat-details">
+                                <span class="stat-label">Total Customers</span>
+                                <h3 class="stat-value" id="kpiTotalCustomers">-</h3>
+                                <span class="stat-subtext">Registered guest profiles</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-info">
+                            <div class="stat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                            <div class="stat-details">
+                                <span class="stat-label">Active Bookings</span>
+                                <h3 class="stat-value" id="kpiActiveBookings">-</h3>
+                                <span class="stat-subtext">Confirmed & in-house</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-accent">
+                            <div class="stat-icon"><i class="fa-solid fa-bell-concierge"></i></div>
+                            <div class="stat-details">
+                                <span class="stat-label">Today's Check-ins</span>
+                                <h3 class="stat-value" id="kpiTodayCheckins">-</h3>
+                                <span class="stat-subtext">Scheduled arrivals today</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-purple">
+                            <div class="stat-icon"><i class="fa-solid fa-person-walking-luggage"></i></div>
+                            <div class="stat-details">
+                                <span class="stat-label">Today's Check-outs</span>
+                                <h3 class="stat-value" id="kpiTodayCheckouts">-</h3>
+                                <span class="stat-subtext">Scheduled departures today</span>
+                            </div>
+                        </div>
+
+                        <div class="stat-card stat-emerald">
+                            <div class="stat-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                            <div class="stat-details">
+                                <span class="stat-label">Total Revenue</span>
+                                <h3 class="stat-value" id="kpiTotalRevenue">₹0</h3>
+                                <span class="stat-subtext">Actual payments collected</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions Strip -->
+                    <div class="quick-action-panel">
+                        <div class="panel-header">
+                            <h4><i class="fa-solid fa-bolt text-warning"></i> Quick Operations</h4>
+                            <span>Direct shortcuts for front desk staff</span>
+                        </div>
+                        <div class="action-buttons-group">
+                            <button class="btn btn-action" onclick="app.showModal('modalNewReservation')">
+                                <i class="fa-solid fa-calendar-plus"></i> New Reservation
+                            </button>
+                            <button class="btn btn-action" onclick="app.showModal('modalNewRoom')">
+                                <i class="fa-solid fa-plus-circle"></i> Add Room
+                            </button>
+                            <button class="btn btn-action" onclick="app.showModal('modalNewCustomer')">
+                                <i class="fa-solid fa-user-plus"></i> Register Guest
+                            </button>
+                            <button class="btn btn-action" onclick="app.navigateTo('checkinout')">
+                                <i class="fa-solid fa-door-open"></i> Front Desk Check-in
+                            </button>
+                            <a href="/api/export/csv/bookings" class="btn btn-action">
+                                <i class="fa-solid fa-file-arrow-down"></i> Export Bookings CSV
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Bookings Table -->
+                    <div class="card recent-bookings-card">
+                        <div class="card-header">
+                            <div>
+                                <h3><i class="fa-solid fa-list-check"></i> Recent Reservations</h3>
+                                <span class="card-subtitle">Real-time bookings from database</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline" onclick="app.navigateTo('reservations')">
+                                View All Reservations <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table class="data-table" id="dashboardRecentTable">
+                                <thead>
+                                    <tr>
+                                        <th>Booking Code</th>
+                                        <th>Guest Name</th>
+                                        <th>Room</th>
+                                        <th>Dates</th>
+                                        <th>Nights</th>
+                                        <th>Status</th>
+                                        <th>Amount</th>
+                                        <th>Payment</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td colspan="9" class="text-center py-4 text-muted"><i class="fa-solid fa-spinner fa-spin"></i> Loading recent bookings...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. ROOM MANAGEMENT VIEW -->
+                <section class="view-section" id="view-rooms">
+                    <div class="view-toolbar">
+                        <div class="toolbar-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="roomsSearchInput" placeholder="Search by room number, amenities...">
+                        </div>
+                        <div class="toolbar-filters">
+                            <select id="roomsCategoryFilter" class="form-select">
+                                <option value="all">All Categories</option>
+                                <option value="Standard">Standard</option>
+                                <option value="Deluxe">Deluxe</option>
+                                <option value="Suite">Suite</option>
+                            </select>
+                            <select id="roomsStatusFilter" class="form-select">
+                                <option value="all">All Statuses</option>
+                                <option value="Available">Available</option>
+                                <option value="Occupied">Occupied</option>
+                                <option value="Maintenance">Maintenance</option>
+                            </select>
+                            <button class="btn btn-primary" onclick="app.showModal('modalNewRoom')">
+                                <i class="fa-solid fa-plus"></i> Add New Room
+                            </button>
+                            <a href="/api/export/csv/rooms" class="btn btn-outline" title="Export Rooms CSV">
+                                <i class="fa-solid fa-file-csv"></i> Export
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body table-responsive">
+                            <table class="data-table" id="roomsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Room No.</th>
+                                        <th>Category</th>
+                                        <th>Base Price / Night</th>
+                                        <th>Max Capacity</th>
+                                        <th>Operational Status</th>
+                                        <th>Amenities</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td colspan="7" class="text-center py-4 text-muted">Loading room directory...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. CUSTOMER MANAGEMENT VIEW -->
+                <section class="view-section" id="view-customers">
+                    <div class="view-toolbar">
+                        <div class="toolbar-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="customersSearchInput" placeholder="Search customer by name, email, or phone...">
+                        </div>
+                        <div class="toolbar-filters">
+                            <button class="btn btn-primary" onclick="app.showModal('modalNewCustomer')">
+                                <i class="fa-solid fa-user-plus"></i> Register Customer
+                            </button>
+                            <a href="/api/export/csv/customers" class="btn btn-outline" title="Export Customers CSV">
+                                <i class="fa-solid fa-file-csv"></i> Export
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body table-responsive">
+                            <table class="data-table" id="customersTable">
+                                <thead>
+                                    <tr>
+                                        <th>Customer ID</th>
+                                        <th>Full Name</th>
+                                        <th>Email Address</th>
+                                        <th>Phone Number</th>
+                                        <th>Address</th>
+                                        <th>Govt ID Proof</th>
+                                        <th>Total Stays</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td colspan="8" class="text-center py-4 text-muted">Loading customers...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 4. RESERVATIONS VIEW -->
+                <section class="view-section" id="view-reservations">
+                    <div class="view-toolbar">
+                        <div class="toolbar-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="reservationsSearchInput" placeholder="Search by code, customer name, room...">
+                        </div>
+                        <div class="toolbar-filters">
+                            <select id="reservationsStatusFilter" class="form-select">
+                                <option value="all">All Reservation Statuses</option>
+                                <option value="Confirmed">Confirmed</option>
+                                <option value="Checked-In">Checked-In</option>
+                                <option value="Checked-Out">Checked-Out</option>
+                                <option value="Cancelled">Cancelled</option>
+                            </select>
+                            <button class="btn btn-primary" onclick="app.showModal('modalNewReservation')">
+                                <i class="fa-solid fa-plus"></i> New Reservation
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body table-responsive">
+                            <table class="data-table" id="reservationsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Guest Name</th>
+                                        <th>Room No.</th>
+                                        <th>Check-in</th>
+                                        <th>Check-out</th>
+                                        <th>Nights</th>
+                                        <th>Guests</th>
+                                        <th>Status</th>
+                                        <th>Billing Total</th>
+                                        <th>Payment</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td colspan="11" class="text-center py-4 text-muted">Loading reservations...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. CHECK-IN / CHECK-OUT FRONT DESK VIEW -->
+                <section class="view-section" id="view-checkinout">
+                    <div class="desk-tabs">
+                        <button class="desk-tab active" data-tab="tab-checkin" onclick="app.switchDeskTab('tab-checkin')">
+                            <i class="fa-solid fa-door-open"></i> Arrivals & Check-Ins
+                        </button>
+                        <button class="desk-tab" data-tab="tab-checkout" onclick="app.switchDeskTab('tab-checkout')">
+                            <i class="fa-solid fa-door-closed"></i> In-House & Check-Outs
+                        </button>
+                    </div>
+
+                    <!-- Subtab 1: Check-in Pending -->
+                    <div class="desk-tab-content active" id="tab-checkin">
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h3>Confirmed Bookings Awaiting Check-in</h3>
+                                    <span class="card-subtitle">Verify guest identity and activate room key</span>
+                                </div>
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table class="data-table" id="checkinTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Booking Code</th>
+                                            <th>Guest Name</th>
+                                            <th>Room</th>
+                                            <th>Scheduled Check-in</th>
+                                            <th>Scheduled Check-out</th>
+                                            <th>Nights</th>
+                                            <th>Payment Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="8" class="text-center py-4 text-muted">Loading pending arrivals...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subtab 2: Check-out Pending -->
+                    <div class="desk-tab-content" id="tab-checkout">
+                        <div class="card">
+                            <div class="card-header">
+                                <div>
+                                    <h3>In-House Guests Ready for Departure</h3>
+                                    <span class="card-subtitle">Settle remaining dues and release room back to available</span>
+                                </div>
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table class="data-table" id="checkoutTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Booking Code</th>
+                                            <th>Guest Name</th>
+                                            <th>Room</th>
+                                            <th>Check-in Date</th>
+                                            <th>Departure Date</th>
+                                            <th>Total Bill</th>
+                                            <th>Amount Paid</th>
+                                            <th>Balance Due</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td colspan="9" class="text-center py-4 text-muted">Loading in-house guests...</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 6. BILLING & PAYMENTS VIEW -->
+                <section class="view-section" id="view-billing">
+                    <div class="view-toolbar">
+                        <div class="toolbar-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="billingSearchInput" placeholder="Search by invoice number, guest name...">
+                        </div>
+                        <div class="toolbar-filters">
+                            <select id="billingStatusFilter" class="form-select">
+                                <option value="all">All Payment Statuses</option>
+                                <option value="Paid">Paid</option>
+                                <option value="Partially Paid">Partially Paid</option>
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body table-responsive">
+                            <table class="data-table" id="billingTable">
+                                <thead>
+                                    <tr>
+                                        <th>Invoice #</th>
+                                        <th>Booking Code</th>
+                                        <th>Guest Name</th>
+                                        <th>Room</th>
+                                        <th>Room Charges</th>
+                                        <th>Discount</th>
+                                        <th>Tax (10%)</th>
+                                        <th>Net Total</th>
+                                        <th>Paid</th>
+                                        <th>Balance Due</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td colspan="12" class="text-center py-4 text-muted">Loading invoices and billing records...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 7. BOOKING HISTORY VIEW -->
+                <section class="view-section" id="view-history">
+                    <div class="view-toolbar">
+                        <div class="toolbar-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="historySearchInput" placeholder="Search audit history...">
+                        </div>
+                        <div class="toolbar-filters">
+                            <a href="/api/export/csv/bookings" class="btn btn-primary">
+                                <i class="fa-solid fa-file-arrow-down"></i> Export Full History CSV
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Complete Historical Records & Audit Trail</h3>
+                                <span class="card-subtitle">Comprehensive ledger of all confirmed, completed and cancelled stays</span>
+                            </div>
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table class="data-table" id="historyTable">
+                                <thead>
+                                    <tr>
+                                        <th>Booking Code</th>
+                                        <th>Customer</th>
+                                        <th>Room Number</th>
+                                        <th>Check-in</th>
+                                        <th>Check-out</th>
+                                        <th>Stay Duration</th>
+                                        <th>Booking Status</th>
+                                        <th>Payment Status</th>
+                                        <th>Total Billed</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td colspan="10" class="text-center py-4 text-muted">Loading audit history...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 8. PLACEHOLDER VIEW (ADVANCED MODULES) -->
+                <section class="view-section" id="view-placeholder">
+                    <div class="placeholder-card">
+                        <div class="placeholder-icon-box">
+                            <i id="placeholderIcon" class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <span class="badge-soon-large">Coming Soon (Phase 2 Roadmap)</span>
+                        <h2 id="placeholderTitle">Advanced Module</h2>
+                        <p id="placeholderDesc">This enterprise module is planned for subsequent system releases.</p>
+                        
+                        <div class="placeholder-specs">
+                            <div class="spec-item">
+                                <i class="fa-solid fa-circle-check text-success"></i>
+                                <span id="placeholderSpec1">Architecture and database schema designed</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-circle-check text-success"></i>
+                                <span id="placeholderSpec2">REST API endpoints outlined</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-clock text-warning"></i>
+                                <span id="placeholderSpec3">Scheduled for rollout in upcoming sprint</span>
+                            </div>
+                        </div>
+
+                        <div class="placeholder-actions">
+                            <button class="btn btn-primary" onclick="app.navigateTo('dashboard')">
+                                <i class="fa-solid fa-arrow-left"></i> Return to Working Dashboard
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- ============================================================================== -->
+    <!-- MODALS SECTION -->
+    <!-- ============================================================================== -->
+
+    <!-- 1. ADD / EDIT ROOM MODAL -->
+    <div class="modal-overlay" id="modalRoom">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="roomModalTitle"><i class="fa-solid fa-bed"></i> Add New Room</h3>
+                <button class="modal-close-btn" onclick="app.closeModal('modalRoom')">&times;</button>
+            </div>
+            <form id="formRoom" onsubmit="app.handleRoomSubmit(event)">
+                <input type="hidden" id="roomEditId" value="">
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="roomNumber">Room Number *</label>
+                            <input type="text" id="roomNumber" class="form-control" placeholder="e.g. 101, 204" required>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="roomType">Category *</label>
+                            <select id="roomType" class="form-select" required>
+                                <option value="Standard">Standard</option>
+                                <option value="Deluxe">Deluxe</option>
+                                <option value="Suite">Suite</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="roomPrice">Price Per Night (₹) *</label>
+                            <input type="number" id="roomPrice" class="form-control" min="100" step="50" placeholder="1500" required>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="roomCapacity">Max Capacity (Guests) *</label>
+                            <input type="number" id="roomCapacity" class="form-control" min="1" max="10" value="2" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomStatus">Operational Status *</label>
+                        <select id="roomStatus" class="form-select" required>
+                            <option value="Available">Available</option>
+                            <option value="Occupied">Occupied</option>
+                            <option value="Maintenance">Maintenance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomAmenities">Amenities (Comma separated)</label>
+                        <input type="text" id="roomAmenities" class="form-control" placeholder="Wi-Fi, AC, Smart TV, Balcony">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="app.closeModal('modalRoom')">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btnSaveRoom">Save Room</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. ADD / EDIT CUSTOMER MODAL -->
+    <div class="modal-overlay" id="modalCustomer">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3 id="customerModalTitle"><i class="fa-solid fa-user-plus"></i> Register Customer</h3>
+                <button class="modal-close-btn" onclick="app.closeModal('modalCustomer')">&times;</button>
+            </div>
+            <form id="formCustomer" onsubmit="app.handleCustomerSubmit(event)">
+                <input type="hidden" id="customerEditId" value="">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="customerFullName">Full Name *</label>
+                        <input type="text" id="customerFullName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="customerEmail">Email Address *</label>
+                            <input type="email" id="customerEmail" class="form-control" placeholder="rahul@example.com" required>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="text" id="customerPhone" class="form-control" placeholder="+91 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerIdProof">Government ID (Passport / Aadhaar / DL)</label>
+                        <input type="text" id="customerIdProof" class="form-control" placeholder="PASSPORT-A981240">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerAddress">Address</label>
+                        <textarea id="customerAddress" class="form-control" rows="2" placeholder="Residential / billing address"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="app.closeModal('modalCustomer')">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btnSaveCustomer">Save Customer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 3. CREATE RESERVATION MODAL -->
+    <div class="modal-overlay" id="modalNewReservation">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-calendar-plus"></i> New Room Reservation</h3>
+                <button class="modal-close-btn" onclick="app.closeModal('modalNewReservation')">&times;</button>
+            </div>
+            <form id="formReservation" onsubmit="app.handleReservationSubmit(event)">
+                <div class="modal-body">
+                    <!-- Step 1: Customer Selection -->
+                    <div class="form-row">
+                        <div class="form-group col-8">
+                            <label for="resCustomerSelect">Select Customer *</label>
+                            <select id="resCustomerSelect" class="form-select" required>
+                                <option value="">-- Choose registered customer --</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-4" style="display:flex; align-items:flex-end;">
+                            <button type="button" class="btn btn-outline w-100" onclick="app.openNewCustomerFromReservation()">
+                                <i class="fa-solid fa-plus"></i> Quick Add Guest
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Date Selection -->
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                            <label for="resCheckIn">Check-In Date *</label>
+                            <input type="date" id="resCheckIn" class="form-control" required onchange="app.onReservationDatesChanged()">
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="resCheckOut">Check-Out Date *</label>
+                            <input type="date" id="resCheckOut" class="form-control" required onchange="app.onReservationDatesChanged()">
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Room Selection (Dynamically Filtered for Availability) -->
+                    <div class="form-row">
+                        <div class="form-group col-8">
+                            <label for="resRoomSelect">Select Room (Verified Available) *</label>
+                            <select id="resRoomSelect" class="form-select" required onchange="app.calculateReservationEstimates()">
+                                <option value="">-- First choose check-in & check-out dates --</option>
+                            </select>
+                            <small class="text-muted" id="roomAvailabilityNote">Real-time overlap check ensures zero double bookings.</small>
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="resGuestsCount">Guests Count *</label>
+                            <input type="number" id="resGuestsCount" class="form-control" min="1" max="10" value="2" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resSpecialRequests">Special Requests / Notes</label>
+                        <input type="text" id="resSpecialRequests" class="form-control" placeholder="e.g. Late arrival, high floor, extra pillows">
+                    </div>
+
+                    <!-- Live Cost Estimator Card -->
+                    <div class="estimate-box">
+                        <div class="estimate-header">
+                            <h5><i class="fa-solid fa-calculator"></i> Live Billing Summary</h5>
+                            <span class="badge badge-info" id="estimateNights">0 Nights</span>
+                        </div>
+                        <div class="estimate-breakdown">
+                            <div class="estimate-row">
+                                <span>Room Rate:</span>
+                                <span id="estimateRoomRate">₹0 / night</span>
+                            </div>
+                            <div class="estimate-row">
+                                <span>Room Charges:</span>
+                                <span id="estimateRoomCharges">₹0</span>
+                            </div>
+                            <div class="estimate-row">
+                                <label for="resDiscount">Promotional Discount (₹):</label>
+                                <input type="number" id="resDiscount" class="form-control form-control-sm" style="width: 120px;" value="0" min="0" step="50" oninput="app.calculateReservationEstimates()">
+                            </div>
+                            <div class="estimate-row">
+                                <span>Estimated Tax (10% GST):</span>
+                                <span id="estimateTax">₹0</span>
+                            </div>
+                            <div class="estimate-row estimate-total">
+                                <strong>Estimated Net Total:</strong>
+                                <strong id="estimateTotalAmount" class="text-primary font-lg">₹0</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Initial Payment -->
+                    <div class="form-row mt-3">
+                        <div class="form-group col-6">
+                            <label for="resPaymentMethod">Payment Method</label>
+                            <select id="resPaymentMethod" class="form-select">
+                                <option value="Cash">Cash</option>
+                                <option value="Credit Card">Credit Card</option>
+                                <option value="UPI">UPI / QR Code</option>
+                                <option value="Debit Card">Debit Card</option>
+                                <option value="Bank Transfer">Bank Transfer</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="resInitialPayment">Advance Payment Amount (₹)</label>
+                            <input type="number" id="resInitialPayment" class="form-control" min="0" step="50" value="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="app.closeModal('modalNewReservation')">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btnConfirmReservation">Confirm & Reserve Room</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4. CHECK-OUT & SETTLEMENT MODAL -->
+    <div class="modal-overlay" id="modalCheckOut">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-person-walking-luggage"></i> Guest Departure & Checkout</h3>
+                <button class="modal-close-btn" onclick="app.closeModal('modalCheckOut')">&times;</button>
+            </div>
+            <form id="formCheckOut" onsubmit="app.handleCheckOutSubmit(event)">
+                <input type="hidden" id="checkoutBookingId" value="">
+                <div class="modal-body">
+                    <div class="checkout-summary-box">
+                        <div class="row-info">
+                            <span>Guest:</span>
+                            <strong id="coGuestName">-</strong>
+                        </div>
+                        <div class="row-info">
+                            <span>Room:</span>
+                            <strong id="coRoomNumber">-</strong>
+                        </div>
+                        <div class="row-info">
+                            <span>Total Bill:</span>
+                            <span id="coTotalBill">₹0</span>
+                        </div>
+                        <div class="row-info">
+                            <span>Already Paid:</span>
+                            <span id="coAmountPaid">₹0</span>
+                        </div>
+                        <div class="row-info row-balance">
+                            <span>Outstanding Balance:</span>
+                            <strong id="coBalanceDue" class="text-danger">₹0</strong>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="coPaymentNow">Amount Settling Now (₹)</label>
+                        <input type="number" id="coPaymentNow" class="form-control" min="0" step="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="coPaymentMethod">Payment Method</label>
+                        <select id="coPaymentMethod" class="form-select">
+                            <option value="Cash">Cash</option>
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Debit Card">Debit Card</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="coNotes">Staff Notes / Checkout Feedback</label>
+                        <input type="text" id="coNotes" class="form-control" placeholder="Room keys returned, minibar verified">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="app.closeModal('modalCheckOut')">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btnConfirmCheckOut">Complete Check-out</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 5. RECORD PAYMENT MODAL -->
+    <div class="modal-overlay" id="modalRecordPayment">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-money-bill-wave"></i> Record Payment</h3>
+                <button class="modal-close-btn" onclick="app.closeModal('modalRecordPayment')">&times;</button>
+            </div>
+            <form id="formRecordPayment" onsubmit="app.handlePaymentSubmit(event)">
+                <input type="hidden" id="payBookingId" value="">
+                <div class="modal-body">
+                    <div class="estimate-box mb-3">
+                        <div class="row-info">
+                            <span>Invoice Number:</span>
+                            <strong id="payInvoiceNum">-</strong>
+                        </div>
+                        <div class="row-info">
+                            <span>Guest:</span>
+                            <strong id="payGuestName">-</strong>
+                        </div>
+                        <div class="row-info">
+                            <span>Outstanding Balance:</span>
+                            <strong id="payBalanceDue" class="text-danger">₹0</strong>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="payAmount">Amount to Pay (₹) *</label>
+                        <input type="number" id="payAmount" class="form-control" min="1" step="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payMethod">Payment Mode *</label>
+                        <select id="payMethod" class="form-select" required>
+                            <option value="UPI">UPI / GPay / PhonePe</option>
+                            <option value="Cash">Cash</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Bank Transfer">Bank Transfer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="payNotes">Transaction Reference / Remarks</label>
+                        <input type="text" id="payNotes" class="form-control" placeholder="e.g. UPI Ref #8271049281">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="app.closeModal('modalRecordPayment')">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btnSubmitPayment">Record Payment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 6. PRINTABLE INVOICE MODAL -->
+    <div class="modal-overlay" id="modalInvoice">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-header no-print">
+                <h3><i class="fa-solid fa-file-invoice"></i> Guest Folio & Invoice</h3>
+                <div class="header-actions">
+                    <button class="btn btn-primary btn-sm" onclick="window.print()">
+                        <i class="fa-solid fa-print"></i> Print Invoice
+                    </button>
+                    <button class="modal-close-btn" onclick="app.closeModal('modalInvoice')">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body invoice-printable-area" id="invoicePrintArea">
+                <!-- Dynamic Invoice Content Rendered by app.js -->
+                <div class="invoice-container">
+                    <div class="invoice-header">
+                        <div class="hotel-details">
+                            <h2><i class="fa-solid fa-hotel"></i> StayHome</h2>
+                            <p class="hotel-sub">Luxury Hotel & Suites</p>
+                            <p>100 Hospitality Way, Silicon Valley, CA 94016</p>
+                            <p>Phone: +1 (800) 555-STAY | support@stayhome-hotel.com</p>
+                        </div>
+                        <div class="invoice-meta">
+                            <h3 class="invoice-badge">TAX INVOICE</h3>
+                            <p><strong>Invoice No:</strong> <span id="invNumber">-</span></p>
+                            <p><strong>Date:</strong> <span id="invDate">-</span></p>
+                            <p><strong>Booking Ref:</strong> <span id="invBookingCode">-</span></p>
+                            <p><strong>Payment Status:</strong> <span id="invStatusBadge" class="badge badge-success">-</span></p>
+                        </div>
+                    </div>
+
+                    <hr class="invoice-divider">
+
+                    <div class="invoice-parties">
+                        <div class="party-box">
+                            <span class="party-label">BILLED TO:</span>
+                            <h4 id="invCustomerName">-</h4>
+                            <p id="invCustomerEmail">-</p>
+                            <p id="invCustomerPhone">-</p>
+                            <p id="invCustomerAddress">-</p>
+                        </div>
+                        <div class="party-box">
+                            <span class="party-label">STAY PARTICULARS:</span>
+                            <p><strong>Room Assigned:</strong> <span id="invRoom">-</span></p>
+                            <p><strong>Check-In:</strong> <span id="invCheckIn">-</span></p>
+                            <p><strong>Check-Out:</strong> <span id="invCheckOut">-</span></p>
+                            <p><strong>Duration:</strong> <span id="invNights">-</span> nights (<span id="invGuests">-</span> guests)</p>
+                        </div>
+                    </div>
+
+                    <table class="invoice-table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th class="text-center">Rate / Night</th>
+                                <th class="text-center">Duration</th>
+                                <th class="text-right">Amount (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong id="invRoomDesc">Room Charges</strong>
+                                    <small class="d-block text-muted" id="invRoomSub">-</small>
+                                </td>
+                                <td class="text-center" id="invRate">-</td>
+                                <td class="text-center" id="invNightsCount">-</td>
+                                <td class="text-right" id="invRoomCharges">-</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="text-right">Subtotal:</td>
+                                <td class="text-right" id="invSubtotal">₹0</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right">Discount:</td>
+                                <td class="text-right text-success" id="invDiscount">-₹0</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right">Hotel Service Tax (10% GST):</td>
+                                <td class="text-right" id="invTax">₹0</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td colspan="3" class="text-right"><strong>Net Total Payable:</strong></td>
+                                <td class="text-right"><strong id="invNetTotal" class="text-primary font-lg">₹0</strong></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right">Total Amount Received:</td>
+                                <td class="text-right text-success" id="invAmountPaid">₹0</td>
+                            </tr>
+                            <tr class="balance-row">
+                                <td colspan="3" class="text-right"><strong>Balance Outstanding:</strong></td>
+                                <td class="text-right"><strong id="invBalanceDue">₹0</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <div class="invoice-footer">
+                        <div class="payment-notes">
+                            <span class="party-label">PAYMENT DETAILS & NOTES:</span>
+                            <p><strong>Method:</strong> <span id="invPayMethod">-</span></p>
+                            <p id="invNotes" class="text-muted small">-</p>
+                        </div>
+                        <div class="authorized-sign">
+                            <div class="signature-line"></div>
+                            <span>Authorized Front Desk Signature</span>
+                        </div>
+                    </div>
+
+                    <div class="invoice-terms text-center">
+                        <small>Thank you for choosing StayHome Luxury Hotel & Suites. We look forward to welcoming you again!</small>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer no-print">
+                <button type="button" class="btn btn-outline" onclick="app.closeModal('modalInvoice')">Close</button>
+                <button type="button" class="btn btn-primary" onclick="window.print()">
+                    <i class="fa-solid fa-print"></i> Print Receipt
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Frontend Application Logic Script -->
+    <script src="/assets/app.js"></script>
+</body>
+</html>
